@@ -19,14 +19,22 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2; //converting 5 to a number
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean("false"); //No errors, code is returning true already
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5; //Added number to convert the string back into a number
 console.log("Total Age: " + totalAge);
+
+//Impplicit 
+let implicit = null + 5;
+console.log(implicit)
+
+//Explicit
+let explicit = Number("Wet Orange 11")
+console.log(explicit)
